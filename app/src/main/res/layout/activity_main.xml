@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.subhasha.myapplication.MainActivity">
+
+    <com.subhasha.myapplication.SwibeButton
+        android:id="@+id/swibeBvutton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+
+        app:barrierDirection="right"
+
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:shimmer_base_color="@color/purple_700"
+            app:shimmer_clip_to_children="true"
+            app:shimmer_direction="right_to_left"
+            app:shimmer_duration="2500"
+            app:shimmer_highlight_color="@color/black"
+            app:shimmer_intensity="20"
+            app:shimmer_repeat_delay="0"
+            app:shimmer_shape="radial">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Swipe to add comment"
+                android:textColor="@color/purple_700"
+                android:textSize="16sp" />
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.ncorti.slidetoact.SlideToActView
+            android:id="@+id/example_gray_on_green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:elevation="2dp"
+            app:animate_completion="true"
+            app:animation_duration="250"
+            app:area_margin="4dp"
+            app:border_radius="2dp"
+            app:complete_icon="@android:color/transparent"
+            app:inner_color="@color/purple_700"
+            app:outer_color="@android:color/transparent"
+
+            app:rotate_icon="false"
+            app:slider_icon="@drawable/ic_baseline_double_arrow_24"
+            app:slider_icon_color="@color/white"
+            app:slider_locked="false"
+            app:slider_reversed="true"
+
+            app:text=""
+            app:text_size="16sp" />
+    </RelativeLayout>
+
+    <com.subhasha.slidingbutton.SlideButton
+
+        android:id="@+id/slide_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="2dp"
+        app:animate_completion="true"
+        app:animation_duration="250"
+        app:area_margin="4dp"
+        app:border_radius="2dp"
+        app:complete_icon="@android:color/transparent"
+        app:inner_color="@color/purple_700"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+
+        app:outer_color="@android:color/transparent"
+        app:rotate_icon="false"
+        app:slider_icon="@drawable/ic_baseline_double_arrow_24"
+        app:slider_icon_color="@color/white"
+        app:slider_locked="false"
+
+        app:slider_reversed="true"
+        app:text=""
+        app:text_size="16sp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

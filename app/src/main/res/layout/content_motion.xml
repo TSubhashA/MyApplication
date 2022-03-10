@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/question_one_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/content_motion_scene">
+
+
+    <TextView
+        android:id="@+id/option_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/option_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unaware/None "
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/comment_saved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
+        android:text="Please add your comment (Optional) \nYou may want to dictate using microphone"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:shimmer_direction="right_to_left"
+        app:shimmer_duration="800"
+        app:shimmer_highlight_color="@color/black"
+        app:shimmer_intensity="10"
+        app:shimmer_repeat_delay="0"
+        app:shimmer_shape="radial">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:text="Swipe to add comment"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.subhasha.slidingbutton.SlideButton
+        android:id="@+id/slider_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:animate_completion="false"
+        app:inner_color="@color/black"
+        app:outer_color="@android:color/transparent"
+        app:slider_icon_color="@color/white"
+        app:slider_reversed="true" />
+
+
+    <TextView
+        android:id="@+id/option_no_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/cancel_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="end"
+        android:text="Cancel"
+        android:textColor="@color/black" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/_edit_text_ll"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0dp"
+
+        app:hintEnabled="false"
+        app:layout_anchorGravity="bottom|center">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="Please add your comment (Optional) \nYou may want to dictate using microphone"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
