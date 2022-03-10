@@ -30,7 +30,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.widget.TextViewCompat
-import com.example.slidingbutton.R
+
 import com.subhasha.slidingbutton.SlideButtonUtil.createIconAnimator
 import com.subhasha.slidingbutton.SlideButtonUtil.loadIconCompat
 import com.subhasha.slidingbutton.SlideButtonUtil.stopIconAnimation
