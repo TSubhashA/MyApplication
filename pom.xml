@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.tsubhasha</groupId>
+    <groupId>io.github.tsubhasha</groupId>
     <artifactId>Sliding-Button-v1.0</artifactId>
     <version>1.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -101,7 +101,7 @@
         <developer>
             <name>Subhash A</name>
             <email>robo.subhash1@gmail.com</email>
-            <organization>com.github.tsubhasha</organization>
+            <organization>io.github.tsubhasha</organization>
             <organizationUrl>https://github.com/TSubhashA</organizationUrl>
         </developer>
     </developers>
