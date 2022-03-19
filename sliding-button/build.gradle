@@ -1,7 +1,14 @@
 plugins {
+//    kotlin("multiplatform") version "1.4.31"
+    id("maven-publish")
+    id("signing")
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'maven-publish'
+//    id 'maven-publish'
+
+//    kotlin("multiplatform") version "1.4.31"
+//    id("maven-publish")
+//    id("signing")
 }
 
 android {
@@ -40,16 +47,32 @@ dependencies {
 //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
-afterEvaluate {
-    publishing{
-        publications{
-            release(MavenPublication){
-                from components.release
+//afterEvaluate {
+//    publishing{
+//        publications{
+//            release(MavenPublication){
+//                from components.release
+//
+//                groupId='com.github.TsubhashA'
+//                artifactId='sliding-button-compose'
+//                version='1.1'
+//            }
+//        }
+//    }
+//}
 
-                groupId='com.github.TsubhashA'
-                artifactId='sliding-button-compose'
-                version='1.1'
-            }
-        }
-    }
-}
+//afterEvaluate {
+//
+//    publishing {
+//        publications {
+//            repositories {
+//                maven {
+//                    name = "oss"
+//                    val releasesRepoUrl = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+//                    val snapshotsRepoUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+//                    url = if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl
+//                }
+//            }
+//        }
+//    }
+//}
